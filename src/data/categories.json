@@ -1,0 +1,67 @@
+[
+  {
+    "id": "politik",
+    "name": {
+      "de": "Politik in der Demokratie",
+      "fa": "سیاست در دموکراسی",
+      "en": "Politics in Democracy"
+    },
+    "description": {
+      "de": "Grundrechte, Staatsaufbau, Verfassungsorgane, Wahlen, Parteien, Sozialstaat, Rechtsstaat, Deutschland in Europa",
+      "fa": "حقوق بنیادی، ساختار دولت، نهادهای قانون اساسی، انتخابات، احزاب، دولت رفاه، حکومت قانون، آلمان در اروپا",
+      "en": "Fundamental rights, state structure, constitutional bodies, elections, parties, welfare state, rule of law, Germany in Europe"
+    },
+    "questionRange": [1, 192],
+    "examAllocation": 19,
+    "subcategories": [
+      { "id": "grundrechte", "name": { "de": "Grundrechte", "fa": "حقوق بنیادی", "en": "Fundamental Rights" }, "questionRange": [1, 40] },
+      { "id": "staatsaufbau", "name": { "de": "Staatsaufbau", "fa": "ساختار دولت", "en": "State Structure" }, "questionRange": [41, 62] },
+      { "id": "verfassungsorgane", "name": { "de": "Verfassungsorgane", "fa": "نهادهای قانون اساسی", "en": "Constitutional Bodies" }, "questionRange": [63, 88] },
+      { "id": "wahlen", "name": { "de": "Wahlen und Beteiligung", "fa": "انتخابات و مشارکت", "en": "Elections & Participation" }, "questionRange": [89, 109] },
+      { "id": "parteien", "name": { "de": "Parteien", "fa": "احزاب", "en": "Parties" }, "questionRange": [110, 130] },
+      { "id": "sozialstaat", "name": { "de": "Sozialstaat", "fa": "دولت رفاه", "en": "Welfare State" }, "questionRange": [131, 149] },
+      { "id": "rechtsstaat", "name": { "de": "Rechtsstaat", "fa": "حکومت قانون", "en": "Rule of Law" }, "questionRange": [150, 170] },
+      { "id": "deutschland-in-europa", "name": { "de": "Deutschland in Europa", "fa": "آلمان در اروپا", "en": "Germany in Europe" }, "questionRange": [171, 192] }
+    ]
+  },
+  {
+    "id": "geschichte",
+    "name": {
+      "de": "Geschichte und Verantwortung",
+      "fa": "تاریخ و مسئولیت",
+      "en": "History and Responsibility"
+    },
+    "description": {
+      "de": "Weimarer Republik, Nationalsozialismus, Nachkriegszeit, Deutsche Einheit",
+      "fa": "جمهوری وایمار، ناسیونال سوسیالیسم، دوران پس از جنگ، وحدت آلمان",
+      "en": "Weimar Republic, National Socialism, Post-war period, German reunification"
+    },
+    "questionRange": [193, 281],
+    "examAllocation": 9,
+    "subcategories": [
+      { "id": "weimarer-republik", "name": { "de": "Weimarer Republik", "fa": "جمهوری وایمار", "en": "Weimar Republic" }, "questionRange": [193, 230] },
+      { "id": "nationalsozialismus", "name": { "de": "Nationalsozialismus", "fa": "ناسیونال سوسیالیسم", "en": "National Socialism" }, "questionRange": [231, 255] },
+      { "id": "nachkriegszeit", "name": { "de": "Nachkriegszeit", "fa": "دوران پس از جنگ", "en": "Post-war Period" }, "questionRange": [256, 270] },
+      { "id": "deutsche-einheit", "name": { "de": "Deutsche Einheit", "fa": "وحدت آلمان", "en": "German Reunification" }, "questionRange": [271, 281] }
+    ]
+  },
+  {
+    "id": "gesellschaft",
+    "name": {
+      "de": "Mensch und Gesellschaft",
+      "fa": "انسان و جامعه",
+      "en": "People and Society"
+    },
+    "description": {
+      "de": "Religion, Alltag und Zusammenleben",
+      "fa": "دین، زندگی روزمره و همزیستی",
+      "en": "Religion, everyday life and coexistence"
+    },
+    "questionRange": [282, 300],
+    "examAllocation": 2,
+    "subcategories": [
+      { "id": "religion", "name": { "de": "Religion", "fa": "دین", "en": "Religion" }, "questionRange": [282, 290] },
+      { "id": "alltag", "name": { "de": "Alltag und Zusammenleben", "fa": "زندگی روزمره و همزیستی", "en": "Everyday Life" }, "questionRange": [291, 300] }
+    ]
+  }
+]
