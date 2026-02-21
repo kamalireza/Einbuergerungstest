@@ -1,5 +1,5 @@
 export type OptionKey = "A" | "B" | "C" | "D";
-export type CategoryId = "politik" | "geschichte" | "gesellschaft";
+export type CategoryId = "politik" | "geschichte" | "gesellschaft" | "berlin";
 export type Locale = "fa" | "en";
 
 export interface LocalizedText {

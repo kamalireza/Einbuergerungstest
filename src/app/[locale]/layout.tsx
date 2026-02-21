@@ -33,6 +33,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
+          <footer className="border-t border-border py-4 text-center text-sm text-text-muted">
+            © {new Date().getFullYear()} Reza Kamali
+          </footer>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -63,5 +63,23 @@
       { "id": "religion", "name": { "de": "Religion", "fa": "دین", "en": "Religion" }, "questionRange": [282, 290] },
       { "id": "alltag", "name": { "de": "Alltag und Zusammenleben", "fa": "زندگی روزمره و همزیستی", "en": "Everyday Life" }, "questionRange": [291, 300] }
     ]
+  },
+  {
+    "id": "berlin",
+    "name": {
+      "de": "Berlin",
+      "fa": "برلین",
+      "en": "Berlin"
+    },
+    "description": {
+      "de": "Fragen für das Bundesland Berlin",
+      "fa": "سوالات ایالت برلین",
+      "en": "Questions for the state of Berlin"
+    },
+    "questionRange": [301, 310],
+    "examAllocation": 3,
+    "subcategories": [
+      { "id": "berlin", "name": { "de": "Berlin", "fa": "برلین", "en": "Berlin" }, "questionRange": [301, 310] }
+    ]
   }
 ]

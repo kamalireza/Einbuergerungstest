@@ -5,6 +5,7 @@ const EXAM_ALLOCATION: Record<CategoryId, number> = {
   politik: 19,
   geschichte: 9,
   gesellschaft: 2,
+  berlin: 3,
 };
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -37,5 +38,5 @@ export function calculateScore(
   ).length;
 }
 
-export const PASS_THRESHOLD = 20;
-export const EXAM_QUESTION_COUNT = 30;
+export const PASS_THRESHOLD = 17;
+export const EXAM_QUESTION_COUNT = 33;

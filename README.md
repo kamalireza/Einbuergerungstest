@@ -24,6 +24,7 @@ A web application for preparing for the German citizenship test (*Einbürgerungs
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or later recommended)
+- [Docker](https://www.docker.com/) (optional, for containerized deployment)
 
 ## Getting Started
 
@@ -41,6 +42,37 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
 
+## Docker
+
+### Development (hot-reload)
+
+Run the dev server in Docker with live code reloading — source file changes reflect instantly without rebuilding:
+
+```bash
+docker compose up dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app. After changing `package.json`, rebuild with:
+
+```bash
+docker compose up dev --build
+```
+
+### Production
+
+```bash
+docker compose up prod --build
+```
+
+Open [http://localhost:4173](http://localhost:4173) to view the app.
+
+### Standalone (without Compose)
+
+```bash
+docker build -t einbuergerungstest .
+docker run -d -p 4173:4173 einbuergerungstest
+```
+
 ## Scripts
 
 | Command | Description |
@@ -49,16 +81,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 | `npm run build` | Create production build |
 | `npm start` | Start production server |
 | `npm run lint` | Run ESLint |
-
-### Question Extraction
-
-A Python utility script is included for extracting questions from the official PDF:
-
-```bash
-python scripts/extract-questions.py
-```
-
-Requires `PyPDF2`. The output is written to `src/data/questions.json`.
 
 ## Project Structure
 
@@ -74,11 +96,8 @@ src/
 │   ├── globals.css
 │   └── layout.tsx         # Root layout
 ├── components/
-│   ├── learn/             # Learn mode components
-│   ├── exam/              # Exam mode components
 │   ├── layout/            # Layout components (header, nav)
-│   ├── shared/            # Shared components
-│   └── ui/                # Base UI primitives
+│   └── shared/            # Shared components
 ├── data/
 │   ├── questions.json     # All 300 questions
 │   └── categories.json    # Category & subcategory definitions

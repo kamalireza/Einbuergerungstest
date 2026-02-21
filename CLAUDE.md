@@ -11,9 +11,17 @@ npm start         # Production server
 npm run lint      # ESLint
 ```
 
+### Docker
+
+```bash
+docker compose up dev            # Dev server with hot-reload (localhost:3000)
+docker compose up dev --build    # Rebuild after package.json changes
+docker compose up prod --build   # Production build (localhost:4173)
+```
+
 ## Architecture
 
-**Einbürgerungstest Trainer** — Next.js 15 app for German citizenship test preparation. 300 official questions with German/Persian/English translations.
+**Einbürgerungstest Trainer** — Next.js 15 app for German citizenship test preparation. 310 official questions with German/Persian/English translations.
 
 ### Routing
 All pages live under `src/app/[locale]/` where locale is `fa` (Persian, RTL, default) or `en` (English). next-intl handles locale detection and routing via `src/middleware.ts`.
@@ -24,7 +32,7 @@ Routes: `/[locale]` (dashboard), `/[locale]/learn/[categoryId]/[questionId]` (st
 Single Zustand store at `src/stores/user-store.ts` persisted to localStorage. Holds bookmarks, learn progress, exam history, and locale. Use `src/hooks/use-hydration.ts` to guard localStorage access after SSR hydration.
 
 ### Data Layer
-Static JSON files — `src/data/questions.json` (300 questions) and `src/data/categories.json` (category/subcategory structure). Query utilities in `src/lib/questions.ts`. Exam generation (weighted random selection: 19 Politik + 9 Geschichte + 2 Gesellschaft = 30) in `src/lib/exam-generator.ts`.
+Static JSON files — `src/data/questions.json` (310 questions) and `src/data/categories.json` (category/subcategory structure). Query utilities in `src/lib/questions.ts`. Exam generation (weighted random selection: 19 Politik + 9 Geschichte + 2 Gesellschaft = 30) in `src/lib/exam-generator.ts`.
 
 ### Exam Flow
 `src/hooks/use-exam.ts` manages exam state (question navigation, answer tracking, timer, submission). Results stored as exam attempts in the Zustand store.

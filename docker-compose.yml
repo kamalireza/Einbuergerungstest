@@ -1,0 +1,35 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: citizenship-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./next.config.ts:/app/next.config.ts
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./postcss.config.mjs:/app/postcss.config.mjs
+      - ./eslint.config.mjs:/app/eslint.config.mjs
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - HOSTNAME=0.0.0.0
+      # Uncomment if hot reload doesn't work:
+      # - WATCHPACK_POLLING=true
+    restart: unless-stopped
+
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: citizenship-prod
+    ports:
+      - "4173:4173"
+    environment:
+      - NODE_ENV=production
+      - PORT=4173
+      - HOSTNAME=0.0.0.0
+    restart: unless-stopped

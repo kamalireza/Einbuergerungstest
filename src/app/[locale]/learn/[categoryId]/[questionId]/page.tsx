@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import { useHydration } from "@/hooks/use-hydration";
 import {
   getQuestionById,
   getQuestionsByCategory,
@@ -40,6 +41,7 @@ export default function QuestionPage() {
     isQuestionLearned,
   } = useUserStore();
 
+  const hydrated = useHydration();
   const [selectedAnswer, setSelectedAnswer] = useState<OptionKey | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -48,8 +50,8 @@ export default function QuestionPage() {
     return <div>Question not found</div>;
   }
 
-  const bookmarked = isBookmarked(questionId);
-  const learned = isQuestionLearned(questionId);
+  const bookmarked = hydrated && isBookmarked(questionId);
+  const learned = hydrated && isQuestionLearned(questionId);
   const prevQuestion = currentIndex > 0 ? categoryQuestions[currentIndex - 1] : null;
   const nextQuestion =
     currentIndex < categoryQuestions.length - 1
