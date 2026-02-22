@@ -30,7 +30,7 @@ A web application for preparing for the German citizenship test (*Einbürgerungs
 
 ```bash
 # Clone the repository
-git clone <repo-url>
+git clone https://github.com/kamalireza/Einbuergerungstest
 cd citizenship
 
 # Install dependencies
