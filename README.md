@@ -2,6 +2,8 @@
 
 A web application for preparing for the German citizenship test (*Einbürgerungstest*). It provides all 300 official questions with Persian and English translations, a realistic exam simulator, and progress tracking.
 
+**Live Demo:** [einbuergerungstestpersian.netlify.app](https://einbuergerungstestpersian.netlify.app/)
+
 ## Features
 
 - **Learn Mode** — Browse all 300 questions organized by category and subcategory, with instant answer feedback
